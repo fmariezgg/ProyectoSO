@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/soproyectos.css">
+
+    <title>Presentación Reveal.js</title>
+
+    <!-- CSS base de Reveal.js -->
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Tema para resaltado de código -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <!-- Aquí cargamos slides.md usando el plugin de Markdown -->
+        <section data-markdown="slides.md"
+                 data-separator="^\n---\n"
+                 data-separator-vertical="^\n--\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+        </section>
+    </div>
+</div>
+
+<!-- Core Reveal.js -->
+<script src="dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/notes/notes.js"></script>
+
+<script>
+    Reveal.initialize({
+        hash: true, // permite navegación por URL con #/slide
+        slideNumber: true, // muestra número de diapositiva
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+</script>
+
+</body>
+</html>

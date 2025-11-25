@@ -1,0 +1,43 @@
+/* Estilo personalizado para Presentación Proyecto SO*/
+
+/* Tamaños de letra */
+.reveal h1, .reveal h2, .reveal h3 {
+    font-size: 28px !important;
+}
+
+.reveal p,
+.reveal li {
+    font-size: 24px !important;
+}
+
+/* Espaciado y line-height para que se vea más limpio */
+.reveal section {
+    line-height: 1.35;
+}
+
+/* Centrar títulos (opcional) */
+.reveal h1, .reveal h2 {
+    text-align: center;
+}
+
+/* Estilos globales */
+.reveal {
+    background-color: white !important;
+    color: black !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Estilos para formas y elementos comunes */
+.reveal div,
+.reveal section,
+.reveal span,
+.reveal p,
+.reveal li {
+    color: #00abb9 !important;
+}
+
+.reveal section {
+    overflow-y: auto;
+    max-height: 100vh;  /* altura máxima de la diapositiva */
+    padding: 1em;        /* para no pegar el texto al borde */
+}
