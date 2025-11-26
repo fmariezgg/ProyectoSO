@@ -1,0 +1,40 @@
+graph TB
+%% Estilos para nodos
+classDef primary fill:#00abb9,stroke:#008c99,stroke-width:2px,color:#000000
+classDef secondary fill:#00c4d4,stroke:#008c99,stroke-width:2px,color:#000000
+
+%% Nodos principales
+EST[Estudiantes<br/>Multiplataforma]
+SSH[Conexión SSH<br/>Segura, MOTD via PAM]
+DROP[Droplet DigitalOcean<br/>openSUSE Tumbleweed   x86-64<br/>1vCPU - 1GB RAM - 35GB SSD NVMe $6/mes]
+SANDBOX[Sandbox Académico]
+TEST[Sistema Testing<br/>BATS-core + TAP]
+FEED[Sistema Feedback<br/>Scripts bash QoL]
+
+%% Servicios
+FLASK[Aplicación Flask<br/>Systemd Services]
+DOCKER[Docker Compose<br/>Orquestación]
+VPN[WireGuard VPN<br/>Conexión Híbrida]
+EXER[Exercism CLI<br/>Plataforma Ejercicios, Prácticas Laboratorio SO]
+
+%% Conexiones
+EST --> SSH
+SSH --> DROP
+DROP --> SANDBOX
+
+SANDBOX --> FLASK
+SANDBOX --> DOCKER
+SANDBOX --> VPN
+SANDBOX --> EXER
+
+FLASK --> TEST
+DOCKER --> TEST
+EXER --> TEST
+
+TEST --> FEED
+FEED --> EST
+
+%% Aplicar estilos
+class EST,SSH,DROP,SANDBOX,TEST,FEED primary
+class FLASK,DOCKER,VPN,EXER secondary
+

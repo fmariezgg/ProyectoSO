@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- Tu CSS personalizado -->
-    <link rel="stylesheet" href="css/soproyectos.css">
-
     <title>Presentación Reveal.js</title>
 
     <!-- CSS base de Reveal.js -->
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
     <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/soproyect.css">
 
     <!-- Tema para resaltado de código -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -21,8 +21,8 @@
 
 <div class="reveal">
     <div class="slides">
-        <!-- Aquí cargamos slides.md usando el plugin de Markdown -->
-        <section data-markdown="slides.md"
+        <!-- Carga tu presentación en Markdown -->
+        <section data-markdown="predefensa-presentacion.md"
                  data-separator="^\n---\n"
                  data-separator-vertical="^\n--\n"
                  data-separator-notes="^Note:"
@@ -38,13 +38,22 @@
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/notes/notes.js"></script>
+<script src="plugin/mermaid/mermaid.js"></script>
 
 <script>
+    // Inicializar Reveal.js
     Reveal.initialize({
-        hash: true, // permite navegación por URL con #/slide
-        slideNumber: true, // muestra número de diapositiva
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        hash: true,
+        slideNumber: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid ],
+        transition: 'fade',
+        autoSlideStoppable: true,
+        mermaid: {
+            theme: 'default',
+            startOnLoad: true
+        }
     });
+
 </script>
 
 </body>

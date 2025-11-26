@@ -1,4 +1,4 @@
-/* Estilo personalizado para Presentación Proyecto SO*/
+/* Estilo personalizado para Presentación Proyecto SO */
 
 /* Tamaños de letra */
 .reveal h1, .reveal h2, .reveal h3 {
@@ -10,34 +10,102 @@
     font-size: 24px !important;
 }
 
-/* Espaciado y line-height para que se vea más limpio */
+/* Espaciado y line-height */
 .reveal section {
     line-height: 1.35;
+    overflow-y: auto;
+    max-height: 100vh;  /* altura máxima de la diapositiva */
+    padding: 1em;        /* margen interno */
 }
 
-/* Centrar títulos (opcional) */
+/* Centrar títulos */
 .reveal h1, .reveal h2 {
     text-align: center;
 }
 
-/* Estilos globales */
-.reveal {
+/* Fondo blanco y color de texto negro global */
+.reveal,
+.reveal .slides {
     background-color: white !important;
     color: black !important;
     font-family: Arial, sans-serif !important;
 }
 
-/* Estilos para formas y elementos comunes */
-.reveal div,
-.reveal section,
-.reveal span,
+/* Forzar color negro a todos los textos normales */
 .reveal p,
-.reveal li {
+.reveal li,
+.reveal span,
+.reveal div,
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    color: black !important;
+}
+
+/* Estilos para elementos decorativos / resaltados */
+.reveal .fragment,
+.reveal code,
+.reveal em {
     color: #00abb9 !important;
 }
 
+/* === Ajuste general de secciones Reveal === */
 .reveal section {
-    overflow-y: auto;
-    max-height: 100vh;  /* altura máxima de la diapositiva */
-    padding: 1em;        /* para no pegar el texto al borde */
+    line-height: 1.35;
+    overflow: visible;      /* Permite que SVGs de Mermaid no se corten */
+    max-height: 100vh;
+    padding: 1em;
 }
+
+/* === Ajustes específicos para Mermaid === */
+.mermaid {
+    font-size: 16px !important;
+    background-color: white !important;
+    max-width: 100%;        /* No se salga del ancho de la diapositiva */
+    max-height: 80vh;       /* Altura máxima de diagrama */
+    overflow: auto;         /* Scroll si es necesario */
+}
+
+/* Escalar los SVGs automáticamente al contenedor */
+.mermaid svg {
+    width: 60% !important;
+    height: auto !important;
+}
+
+/* Fondo turquesa para nodos core */
+.mermaid .node rect {
+    rx: 5px;
+    ry: 5px;
+}
+
+/* Colores de nodos según clases */
+.mermaid .core rect {
+    fill: #00abb9 !important;
+    stroke: #006670 !important;
+    stroke-width: 2px !important;
+}
+.mermaid .service rect {
+    fill: #00c4d4 !important;
+    stroke: #008c99 !important;
+    stroke-width: 2px !important;
+}
+
+/* Texto dentro de nodos */
+.mermaid .label {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;  /* Ajustable si quieres más grande */
+    font-weight: bold !important;
+    color: #000000 !important;
+    text-align: center !important;
+}
+
+/* Flechas */
+.mermaid .edgePath .path {
+    stroke: #333 !important;
+    stroke-width: 2px !important;
+}
+.mermaid .arrowheadPath {
+    fill: #333 !important;
+
+}
+
