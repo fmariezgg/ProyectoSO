@@ -57,28 +57,28 @@
     padding: 1em;
 }
 
-/* === Ajustes específicos para Mermaid === */
+/* === Ajustes específicos para Mermaid ===
 .mermaid {
     font-size: 16px !important;
     background-color: white !important;
-    max-width: 100%;        /* No se salga del ancho de la diapositiva */
-    max-height: 80vh;       /* Altura máxima de diagrama */
-    overflow: auto;         /* Scroll si es necesario */
+    max-width: 100%;        /* No se salga del ancho de la diapositiva
+    max-height: 80vh;       /* Altura máxima de diagrama
+    overflow: auto;         /* Scroll si es necesario
 }
 
-/* Escalar los SVGs automáticamente al contenedor */
+/* Escalar los SVGs automáticamente al contenedor
 .mermaid svg {
     width: 60% !important;
     height: auto !important;
 }
 
-/* Fondo turquesa para nodos core */
+/* Fondo turquesa para nodos core
 .mermaid .node rect {
     rx: 5px;
     ry: 5px;
 }
 
-/* Colores de nodos según clases */
+/* Colores de nodos según clases
 .mermaid .core rect {
     fill: #00abb9 !important;
     stroke: #006670 !important;
@@ -90,16 +90,16 @@
     stroke-width: 2px !important;
 }
 
-/* Texto dentro de nodos */
+/* Texto dentro de nodos
 .mermaid .label {
     font-family: Arial, sans-serif !important;
-    font-size: 14px !important;  /* Ajustable si quieres más grande */
+    font-size: 14px !important;  /* Ajustable si quieres más grande
     font-weight: bold !important;
     color: #000000 !important;
     text-align: center !important;
 }
 
-/* Flechas */
+/* Flechas
 .mermaid .edgePath .path {
     stroke: #333 !important;
     stroke-width: 2px !important;
@@ -108,4 +108,5 @@
     fill: #333 !important;
 
 }
+*/
 
