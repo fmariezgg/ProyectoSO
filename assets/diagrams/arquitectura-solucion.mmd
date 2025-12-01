@@ -1,0 +1,41 @@
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'background': '#ffffff',
+  'primaryColor': '#00abb9',
+  'primaryTextColor': '#000000',
+  'primaryBorderColor': '#008c99',
+  'lineColor': '#00abb9',
+  'secondaryColor': '#00c4d4',
+  'tertiaryColor': '#e6f7f8',
+  'nodeBorder': '#008c99',
+  'fontFamily': 'Arial, Helvetica, sans-serif',
+  'clusterBkg': '#e6f7f8',
+  'clusterBorder': '#00abb9'
+}}}%%
+
+graph LR
+    A[Estudiante<br/>Cliente SSH] -->|SSH Puerto 22| B(DigitalOcean Droplet)
+
+    subgraph "Instancia Cloud (IaaS)"
+        B --> C[openSUSE Tumbleweed<br/>Sistema Base]
+        C --> D[Módulos PAM<br/>Autenticación]
+        C --> E[Cloud-init<br/>Configuración Automática]
+        C --> F[Scripts Bash<br/>Personalización]
+
+        D --> G[Usuarios<br/>y Grupos]
+        E --> H[Paquetes<br/>Instalados]
+        F --> I[Entorno<br/>Personalizado]
+
+        G --> J[Sandbox Funcional<br/>Pre-configurado]
+        H --> J
+        I --> J
+    end
+
+    J --> K["<b>Resultado:</b><br/>Entorno de práctica listo<br/>en 2-5 minutos"]
+
+    style A fill:#00abb9,stroke:#008c99,stroke-width:2px,color:#000000
+    style B fill:#00c4d4,stroke:#008c99,stroke-width:2px,color:#000000
+    style C fill:#e6f7f8,stroke:#00abb9,stroke-width:1px,color:#333333
+    style D,E,F fill:#f0f9fa,stroke:#00abb9,stroke-width:1px,color:#333333
+    style G,H,I fill:#e6f7f8,stroke:#00abb9,stroke-width:1px,color:#333333
+    style J fill:#00c4d4,stroke:#008c99,stroke-width:2px,color:#000000
+    style K fill:#00abb9,stroke:#008c99,stroke-width:2px,color:#000000

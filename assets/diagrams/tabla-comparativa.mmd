@@ -1,0 +1,44 @@
+%%{init: {'theme': 'neutral', 'themeVariables': {
+  'background': '#ffffff',
+  'primaryColor': '#00abb9',
+  'primaryTextColor': '#000000',
+  'primaryBorderColor': '#008c99',
+  'lineColor': '#00abb9',
+  'secondaryColor': '#00c4d4',
+  'tertiaryColor': '#e6f7f8',
+  'nodeBorder': '#008c99',
+  'fontFamily': 'Arial, Helvetica, sans-serif'
+}}}%%
+
+graph TD
+    A["<div style='font-size:24px;padding:15px;text-align:center'><b>ANALISIS COMPARATIVO</b><br/>DigitalOcean vs VMware</div>"]
+
+    A --> B["<div style='padding:10px;text-align:center'><b>CRITERIOS DE EVALUACION</b></div>"]
+
+    B --> C1["<div style='padding:8px'><b>Tiempo de Onboarding</b><br/><span style='color:#00abb9;font-weight:bold'>DO: 2-5 minutos</span><br/><span style='color:#666666'>VMware: 2-3 horas</span></div>"]
+    B --> C2["<div style='padding:8px'><b>Costo de Licenciamiento</b><br/><span style='color:#00abb9;font-weight:bold'>DO: $8/mes</span><br/><span style='color:#666666'>VMware: Prohibitivo</span></div>"]
+    B --> C3["<div style='padding:8px'><b>Compatibilidad Binaria</b><br/><span style='color:#00abb9;font-weight:bold'>DO: Nativa x86-64</span><br/><span style='color:#666666'>VMware: Emulacion ARM</span></div>"]
+    B --> C4["<div style='padding:8px'><b>Requisitos Cliente</b><br/><span style='color:#00abb9;font-weight:bold'>DO: Minimos</span><br/><span style='color:#666666'>VMware: Hardware potente</span></div>"]
+    B --> C5["<div style='padding:8px'><b>Flexibilidad</b><br/><span style='color:#00abb9;font-weight:bold'>DO: QCOW2 + cloud-init</span><br/><span style='color:#666666'>VMware: Conversion compleja</span></div>"]
+
+    C1 --> D1["<div style='padding:8px'><b>IMPACTO: EFICIENCIA</b><br/>Inmediatez en practicas</div>"]
+    C2 --> D2["<div style='padding:8px'><b>IMPACTO: SOSTENIBILIDAD</b><br/>Costo predecible</div>"]
+    C3 --> D3["<div style='padding:8px'><b>IMPACTO: EQUIDAD</b><br/>Entorno homogeneo x86</div>"]
+    C4 --> D4["<div style='padding:8px'><b>IMPACTO: ACCESIBILIDAD</b><br/>Cualquier dispositivo</div>"]
+    C5 --> D5["<div style='padding:8px'><b>IMPACTO: ESTANDARIZACION</b><br/>Trabajo asincrono</div>"]
+
+    D1 --> E["<div style='font-size:20px;padding:12px;text-align:center'><b>CONCLUSION</b><br/>DigitalOcean ofrece mejor relacion<br/>valor/tiempo para contexto academico</div>"]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+
+    classDef primary fill:#00abb9,stroke:#008c99,stroke-width:2px,color:#000000
+    classDef secondary fill:#00c4d4,stroke:#008c99,stroke-width:2px,color:#000000
+    classDef tertiary fill:#e6f7f8,stroke:#00abb9,stroke-width:1px,color:#333333
+
+    class A primary
+    class B tertiary
+    class C1,C2,C3,C4,C5 tertiary
+    class D1,D2,D3,D4,D5 secondary
+    class E primary
