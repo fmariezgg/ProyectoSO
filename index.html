@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Defensa de Proyecto – Presentación</title>
+
+    <!-- CSS base Reveal.js -->
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+
+    <!-- Tema personalizado -->
+    <link rel="stylesheet" href="css/soproyect.css">
+
+    <!-- Highlight JS -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <!-- Logo de la universidad -->
+        <img src="css/img/logo-uam.png"
+             class="university-logo"
+             title="Universidad">
+
+        <div class="slides">
+            <!-- Portada y resto de slides... -->
+        </div>
+
+        <!-- Portada -->
+        <section data-markdown="content/00-presentacion.md"
+                 data-separator="^\n---\n$"
+                 data-separator-vertical="^\n\n\n"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+        </section>
+
+        <!-- Tabla de Contenido -->
+        <section id="menu">
+            <h2>Tabla de Contenidos</h2>
+            <ol>
+                <li><a href="#/2">Introducción</a></li>
+                <li><a href="#/3">Planteamiento del Problema</a></li>
+                <li><a href="#/5">Objetivos</a></li>
+                <li><a href="#/6">Hipótesis</a></li>
+                <li><a href="#/7">Marco Teórico</a></li>
+                <li><a href="#/10">Marco Metodológico</a></li>
+                <li><a href="#/12">Análisis Comparativo</a></li>
+                <li><a href="#/13">Resultados del Diagnóstico</a></li>
+                <li><a href="#/14">Conclusiones y Recomendaciones</a></li>
+                <li><a href="#/15">Referencias</a></li>
+                <li><a href="#/16">Demostración MVP</a></li>
+                <li><a href="#/18">Gracias y Preguntas</a></li>
+            </ol>
+        </section>
+
+        <!-- Secciones de contenido -->
+        <section data-markdown="content/01-introduccion.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/02-planteamiento-del-problema.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/03-objetivos.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/04-hipotesis.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/05-marco-teorico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/06-marco-metodologico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/07-analisis-comparativo.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/08-resultados-diagnostico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/09-conclusiones-recomendaciones.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/10-referencias.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/11-demostracion-mvp.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/12-gracias-preguntas.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<!-- Reveal.js Core -->
+<script src="dist/reveal.js"></script>
+
+<!-- Plugins -->
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+
+<script>
+    // Inicializar Reveal.js con la configuración correcta
+    Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the slide number
+        slideNumber: false,
+        // Display a subtle timer bar (time is in minutes)
+        timeRemaining: 15,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable touch support
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Enable fragments
+        fragments: true,
+        // Embedded
+        embedded: false,
+        // Display help
+        help: true,
+        // Number of milliseconds between automatically proceeding to the next slide
+        autoSlide: 0,
+        // Allow stopping the auto-slide
+        autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Hide the address bar
+        hideAddressBar: true,
+        // Preview the links
+        previewLinks: false,
+        // Apply a 3D roll to links on hover
+        rollingLinks: false,
+        // Transition style
+        transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+        // Speed of the transition effect
+        transitionSpeed: 'default',
+        // Transition of the background
+        backgroundTransition: 'default',
+        // View distance
+        viewDistance: 3,
+        // Configuración adicional de tu presentación
+        hash: true,
+        controlsLayout: "bottom-right",
+        controlsBackArrows: "faded",
+
+        // Configuración específica de Markdown
+        markdown: {
+            smartypants: true,
+            smartLists: true,
+            separator: '^\n---\n',
+            separatorVertical: '^\n\n\n',
+            separatorNotes: '^Note:'
+        },
+
+        // Plugins
+        plugins: [
+            RevealMarkdown,
+            RevealHighlight,
+            RevealNotes,
+            RevealZoom
+        ]
+    }).then(() => {
+        // Una vez que Reveal esté listo
+        console.log('Reveal.js inicializado correctamente');
+
+        // Configurar highlighting de código
+        hljs.initHighlightingOnLoad();
+    });
+
+    // Hotkeys personalizadas: T = índice, P = portada
+    document.addEventListener('keydown', function(event) {
+        // Solo activar si no estamos en un elemento editable
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            return;
+        }
+
+        if(event.key === 'T' || event.key === 't'){
+            Reveal.slide(1); // Tabla de contenido
+            event.preventDefault();
+        }
+        if(event.key === 'P' || event.key === 'p'){
+            Reveal.slide(0); // Portada
+            event.preventDefault();
+        }
+    });
+
+    // Función para asegurar que los botones de regreso estén en todas las slides
+    Reveal.on('slidechanged', function(event) {
+        // Asegurarse de que el botón esté presente en todas las slides excepto portada e índice
+        if (event.indexh > 1) { // Si no es la slide 0 (portada) ni 1 (índice)
+            const currentSlide = event.currentSlide;
+            if (!currentSlide.querySelector('.back-button-container')) {
+                const backButton = document.createElement('div');
+                backButton.className = 'back-button-container';
+                backButton.innerHTML = '<a href="#/1" class="back-button">← Índice</a>';
+                currentSlide.appendChild(backButton);
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

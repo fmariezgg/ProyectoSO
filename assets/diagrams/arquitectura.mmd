@@ -1,0 +1,40 @@
+%%{init: {'theme': 'base', 'themeVariables': {
+  'primaryColor': '#00abb9',
+  'primaryTextColor': '#000000',
+  'primaryBorderColor': '#008c99',
+  'lineColor': '#00abb9',
+  'secondaryColor': '#00c4d4',
+  'tertiaryColor': '#e6f7f8',
+  'fontFamily': 'Arial, sans-serif'
+}}}%%
+
+graph TD
+    A["<b>DECISION DE INFRAESTRUCTURA</b><br/>Para Contexto Academico"] --> B{<b>Analisis por Criterio</b>}
+
+    B --> C1["<b>1. Tiempo de Onboarding</b><br/><span style='color:#00abb9;font-weight:bold'>DO: 2-5 min</span><br/><span style='color:#666'>VMware: 2-3 horas</span>"]
+    B --> C2["<b>2. Costo de Licenciamiento</b><br/><span style='color:#00abb9;font-weight:bold'>DO: $8/mes</span><br/><span style='color:#666'>VMware: Prohibitivo</span>"]
+    B --> C3["<b>3. Compatibilidad Binaria</b><br/><span style='color:#00abb9;font-weight:bold'>DO: Nativa x86-64</span><br/><span style='color:#666'>VMware: Emulacion ARM</span>"]
+    B --> C4["<b>4. Requisitos del Cliente</b><br/><span style='color:#00abb9;font-weight:bold'>DO: Minimos</span><br/><span style='color:#666'>VMware: Hardware potente</span>"]
+    B --> C5["<b>5. Flexibilidad</b><br/><span style='color:#00abb9;font-weight:bold'>DO: QCOW2 + cloud-init</span><br/><span style='color:#666'>VMware: Conversion compleja</span>"]
+
+    C1 --> D1["<b>Impacto Academico:</b><br/>EFICIENCIA - Inmediatez en practicas"]
+    C2 --> D2["<b>Impacto Academico:</b><br/>SOSTENIBILIDAD - Costo predecible"]
+    C3 --> D3["<b>Impacto Academico:</b><br/>EQUIDAD - Entorno homogeneo x86"]
+    C4 --> D4["<b>Impacto Academico:</b><br/>ACCESIBILIDAD - Cualquier dispositivo"]
+    C5 --> D5["<b>Impacto Academico:</b><br/>ESTANDARIZACION - Trabajo asincrono"]
+
+    D1 --> E["<b>Conclusion:</b><br/>DigitalOcean ofrece mejor relacion<br/>valor/tiempo para aprendizaje<br/>con consistencia y flexibilidad superior"]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+
+    classDef primary fill:#00abb9,stroke:#008c99,stroke-width:2px,color:#000000
+    classDef secondary fill:#00c4d4,stroke:#008c99,stroke-width:2px,color:#000000
+    classDef tertiary fill:#e6f7f8,stroke:#00abb9,stroke-width:1px,color:#333333
+
+    class A primary
+    class B tertiary
+    class C1,C2,C3,C4,C5 tertiary
+    class D1,D2,D3,D4,D5 secondary
+    class E primary
