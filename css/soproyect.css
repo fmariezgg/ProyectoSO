@@ -1,774 +1,105 @@
-/*!
- * reveal.js - Estilos base preservados
- * Personalización para Prototipo Sandbox UAM
- */
-
-/*********************************************
- * ESTILOS BASE REVEAL.JS PRESERVADOS
- *********************************************/
-html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
-.reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
-.reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
-.reveal small, .reveal strike, .reveal strong, .reveal sub, .reveal sup, .reveal tt, .reveal var,
-.reveal b, .reveal u, .reveal center,
-.reveal dl, .reveal dt, .reveal dd, .reveal ol, .reveal ul, .reveal li,
-.reveal fieldset, .reveal form, .reveal label, .reveal legend,
-.reveal table, .reveal caption, .reveal tbody, .reveal tfoot, .reveal thead, .reveal tr, .reveal th, .reveal td,
-.reveal article, .reveal aside, .reveal canvas, .reveal details, .reveal embed,
-.reveal figure, .reveal figcaption, .reveal footer, .reveal header, .reveal hgroup,
-.reveal menu, .reveal nav, .reveal output, .reveal ruby, .reveal section, .reveal summary,
-.reveal time, .reveal mark, .reveal audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+/* =============================== */
+/*   ESTILO GENERAL DE LA DEFENSA  */
+/* =============================== */
+.reveal {
+    background: #ffffff !important;
+    font-family: "Arial", sans-serif;
+    color: #000000;
 }
 
-/*********************************************
- * PERSONALIZACIÓN UAM - PROTOTIPO SANDBOX
- *********************************************/
+.reveal h1 { font-size: 40px !important; font-weight: bold; color: #000000; margin-bottom: 20px; border-bottom: 2px solid #006699; padding-bottom: 10px; }
+.reveal h2 { font-size: 34px !important; margin-bottom: 15px; color: #000000; font-weight: bold; }
+.reveal h3 { font-size: 30px !important; margin-bottom: 12px; color: #000000; }
+.reveal p, .reveal li { font-size: 24px !important; line-height: 1.4; color: #000000; }
 
-/* ===== CONFIGURACIÓN BASE ===== */
-.reveal,
-.reveal .slides {
-    background-color: white !important;
-    color: black !important;
-    font-family: Arial, sans-serif !important;
-}
+/* =============================== */
+/*   TABLA DE CONTENIDOS (TOC)     */
+/* =============================== */
+#menu h2 { font-size: 42px !important; text-align: center; }
+#menu ol { list-style: decimal; font-size: 28px; margin: 0 auto; width: 60%; }
+#menu li { margin: 12px 0; }
+#menu a { text-decoration: none; color: #006699; font-weight: bold; }
+#menu a:hover { color: #00a3cc; text-decoration: underline; }
 
-/* ===== TIPOGRAFÍA - TUS ESPECIFICACIONES ===== */
-.reveal h1,
-.reveal h2,
-.reveal h3 {
-    font-size: 28px !important;
-    color: black !important;
-    font-family: Arial, sans-serif !important;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.reveal p,
-.reveal li,
-.reveal span,
-.reveal div {
-    font-size: 24px !important;
-    color: black !important;
-    font-family: Arial, sans-serif !important;
-    line-height: 1.35;
-}
-
-/* ===== TABLA DE CONTENIDOS MEJORADA ===== */
-.toc-container {
-    max-width: 900px;
-    margin: 2rem auto;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 171, 185, 0.2);
-}
-
-.toc-header {
-    text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid #00abb9;
-}
-
-.toc-title {
-    font-size: 32px !important;
-    color: #00abb9 !important;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.toc-subtitle {
-    font-size: 20px !important;
-    color: #666 !important;
-    font-style: italic;
-}
-
-.toc-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 1rem;
-}
-
-.toc-item {
-    margin: 0;
-    padding: 1.2rem 1.5rem;
-    border: 1px solid rgba(0, 171, 185, 0.3);
-    background: rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 24px !important;
-    font-family: Arial, sans-serif !important;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.toc-item:hover {
-    background: rgba(0, 171, 185, 0.08);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 171, 185, 0.2);
-    border-color: #00abb9;
-}
-
-.toc-item.active {
-    background: rgba(0, 171, 185, 0.12);
-    border-color: #00abb9;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 171, 185, 0.25);
-}
-
-.toc-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 4px;
-    background: #00abb9;
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
-}
-
-.toc-item:hover::before,
-.toc-item.active::before {
-    transform: scaleY(1);
-}
-
-.toc-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    color: white !important;
-    font-weight: bold;
-    margin-right: 15px;
-    font-size: 18px !important;
-    background: #00abb9;
-    border-radius: 50%;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.toc-item:hover .toc-number {
-    background: #006670;
-    transform: scale(1.1);
-}
-
-.toc-item.active .toc-number {
-    background: #004a52;
-}
-
-.toc-text {
-    color: black !important;
-    font-size: 22px !important;
-    font-family: Arial, sans-serif !important;
-    flex: 1;
-}
-
-.toc-item:hover .toc-text {
-    color: #006670 !important;
-}
-
-.toc-item.active .toc-text {
-    color: #004a52 !important;
-}
-
-/* ===== BOTÓN DE REGRESO ===== */
+/* =============================== */
+/* Botón de volver al índice       */
+/* =============================== */
 .back-button {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0, 171, 185, 0.9) !important;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0,107,153,0.8);
     color: white !important;
-    padding: 12px 18px;
-    border-radius: 5px;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 6px;
     cursor: pointer;
-    z-index: 1000;
-    font-size: 16px !important;
-    font-family: Arial, sans-serif !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease;
-    display: none;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 9999;
+    text-decoration: none;
+    transition: 0.3s;
 }
+.back-button:hover { background: rgba(0,163,204,0.9); }
 
-.back-button:hover {
-    background: rgba(0, 171, 185, 1) !important;
-    transform: scale(1.05);
-}
-
-/* ===== TIP DE NAVEGACIÓN ===== */
-.navigation-tip {
-    background: rgba(0, 171, 185, 0.1) !important;
-    color: black !important;
-    padding: 1rem;
-    border-radius: 5px;
-    border-left: 4px solid #00abb9 !important;
-    font-size: 20px !important;
-    font-family: Arial, sans-serif !important;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.navigation-tip strong {
-    color: black !important;
-}
-
-/* ===== ESTILOS PARA TECLAS ===== */
-kbd {
-    background: rgba(0, 171, 185, 0.2) !important;
-    border: 1px solid #00abb9 !important;
-    border-radius: 4px;
-    padding: 4px 8px;
-    font-family: Arial, sans-serif !important;
-    font-size: 18px !important;
-    color: black !important;
-    font-weight: bold;
-}
-
-/* ===== MEJORAS PARA TABLAS ===== */
-.reveal table {
-    font-size: 20px !important;
-    margin: 1.5rem auto;
-    border-collapse: collapse;
-    background: white !important;
-    border: 2px solid #ddd;
-    font-family: Arial, sans-serif !important;
-}
-
-.reveal th {
-    background: rgba(0, 171, 185, 0.3) !important;
-    padding: 15px;
-    border: 2px solid #ddd;
-    color: black !important;
-    font-weight: bold;
-    text-align: center;
-    font-size: 22px !important;
-}
-
-.reveal td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    color: black !important;
-    background: white !important;
-    font-size: 20px !important;
-    text-align: left;
-}
-
-/* ===== ESTILOS PARA PORTADA ===== */
-.portada-container {
-    text-align: center;
-    padding: 3rem;
-}
-
-.portada-titulo {
-    color: #00abb9 !important;
-    font-size: 36px !important;
-    font-family: Arial, sans-serif !important;
-    margin-bottom: 2rem;
-    border-bottom: 4px solid #00abb9;
-    padding-bottom: 1.5rem;
-    display: inline-block;
-    font-weight: bold;
-}
-
-.portada-subtitulo {
-    color: #006670 !important;
-    font-size: 28px !important;
-    font-family: Arial, sans-serif !important;
-    margin-bottom: 3rem;
-}
-
-.portada-info {
-    color: black !important;
-    font-size: 24px !important;
-    font-family: Arial, sans-serif !important;
-    margin-top: 4rem;
-}
-
-/* ===== ELEMENTOS DESTACADOS ===== */
-.highlight-box {
-    background: rgba(0, 171, 185, 0.1) !important;
-    border-left: 4px solid #00abb9 !important;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 0 8px 8px 0;
-    font-size: 24px !important;
-    font-family: Arial, sans-serif !important;
-}
-
-.reveal blockquote {
-    background: rgba(0, 171, 185, 0.05) !important;
-    border-left: 4px solid #00abb9 !important;
-    padding: 1.5rem;
-    font-style: italic;
-    color: black !important;
-    margin: 1.5rem 0;
-    font-size: 24px !important;
-    font-family: Arial, sans-serif !important;
-}
-
-/* ===== MEJORAS PARA LISTAS ===== */
-.reveal ul,
-.reveal ol {
-    text-align: left;
-    margin-left: 3rem;
-    font-size: 24px !important;
-}
-
-.reveal li {
-    margin-bottom: 0.8rem;
-    font-size: 24px !important;
-    font-family: Arial, sans-serif !important;
-}
-
-/* ===== ESTILOS PARA CÓDIGO ===== */
-.reveal code {
-    background: rgba(0, 171, 185, 0.1) !important;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #00abb9 !important;
-    font-family: 'Courier New', monospace;
-    font-size: 20px !important;
-}
-
-.reveal pre code {
-    background: #1e1e1e !important;
-    color: #d4d4d4 !important;
-    padding: 1.5rem;
-    border-radius: 8px;
-    font-size: 18px !important;
-}
-
-/* ===== AJUSTES PARA MERMAID ===== */
-.mermaid {
-    font-size: 16px !important;
-    background-color: white !important;
-    max-width: 100%;
-    max-height: 70vh;
-    overflow: auto;
-    margin: 1rem 0;
-}
-
-.mermaid svg {
-    width: 80% !important;
-    height: auto !important;
-}
-
-/* ===== RESPONSIVE PARA MÓVILES ===== */
-@media (max-width: 768px) {
-    .toc-container {
-        max-width: 95%;
-        padding: 1rem;
-    }
-
-    .toc-list {
-        grid-template-columns: 1fr;
-        gap: 0.8rem;
-    }
-
-    .toc-item {
-        padding: 1rem;
-        font-size: 20px !important;
-    }
-
-    .toc-number {
-        width: 30px;
-        height: 30px;
-        font-size: 16px !important;
-        margin-right: 12px;
-    }
-
-    .toc-text {
-        font-size: 20px !important;
-    }
-
-    .toc-title {
-        font-size: 26px !important;
-    }
-
-    .back-button {
-        bottom: 10px;
-        left: 10px;
-        font-size: 14px !important;
-        padding: 10px 14px;
-    }
-
-    .reveal h1,
-    .reveal h2,
-    .reveal h3 {
-        font-size: 24px !important;
-    }
-
-    .reveal p,
-    .reveal li {
-        font-size: 20px !important;
-    }
-
-    .reveal table {
-        font-size: 16px !important;
-    }
-}
-
-/* ===== ELEMENTOS DECORATIVOS ===== */
-.reveal .fragment,
-.reveal code,
-.reveal em {
-    color: #00abb9 !important;
-}
-
-.reveal .progress {
-    color: #00abb9 !important;
-}
-
-.reveal .progress span {
-    background: #00abb9 !important;
-}
-
-/* ===== MEJORAS PARA SECCIONES ===== */
-.reveal section {
-    line-height: 1.35;
-    overflow: visible;
-    max-height: 100vh;
-    padding: 1.5em;
-    font-family: Arial, sans-serif !important;
-}
-
-/* ===== ESTILOS PARA NOTAS DEL PRESENTADOR ===== */
-.reveal .speaker-notes {
-    background: white !important;
-    color: black !important;
-    border-top: 4px solid #00abb9 !important;
-    font-family: Arial, sans-serif !important;
-    font-size: 18px !important;
-}
-
-/*********************************************
- * ESTILOS REVEAL.JS ORIGINALES PRESERVADOS
- * (Se mantienen todos los estilos base de reveal.js)
- *********************************************/
-
-/* [Todos los estilos reveal.js originales se preservan aquí...] */
-
-/* View fragments */
-.reveal .slides section .fragment {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease;
-}
-
-.reveal .slides section .fragment.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Controls */
-.reveal .controls {
-    display: none;
-    position: fixed;
-    width: 110px;
-    height: 110px;
-    z-index: 30;
-    right: 10px;
-    bottom: 10px;
-}
-
-/* Progress bar */
-.reveal .progress {
-    position: fixed;
-    display: none;
-    height: 3px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Slide number */
-.reveal .slide-number {
-    position: fixed;
+/* =============================== */
+/* Imágenes de diagramas Mermaid   */
+/* =============================== */
+.reveal img.diagram {
     display: block;
-    right: 8px;
-    bottom: 8px;
-    z-index: 31;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1;
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px;
+    max-width: 90%;
+    max-height: 70vh;
+    margin: 1em auto;
 }
 
-/* ===== LOGO UNIVERSIDAD ===== */
-.uam-logo {
+/* =============================== */
+/* CÓDIGO DESTACADO                */
+/* =============================== */
+.reveal code { font-size: 22px !important; color: #006699 !important; }
+
+/* =============================== */
+/* AJUSTES DE SLIDE                */
+/* =============================== */
+.reveal section { padding: 1.2em; overflow: visible !important; }
+.reveal h1, .reveal h2 { text-align: center !important; }
+
+/* =============================== */
+/* Ajustes para PDF/Impresión      */
+/* =============================== */
+@media print {
+    .back-button { display: none !important; }
+    .reveal { zoom: 0.85; }
+}
+
+/* =============================== */
+/*   LOGO UNIVERSIDAD              */
+/* =============================== */
+.university-logo {
     position: fixed;
     top: 20px;
-    left: 20px;
-    z-index: 100;
-    width: 120px;
+    right: 20px;
+    width: 80px;
     height: auto;
-    opacity: 0.9;
-    transition: all 0.3s ease;
+    z-index: 10000;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-.uam-logo:hover {
+.university-logo:hover {
     opacity: 1;
-    transform: scale(1.05);
 }
 
-/* ===== PORTADA MEJORADA ===== */
-.portada-uam {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fdff 100%);
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 90%;
-    box-shadow: 0 10px 30px rgba(0, 171, 185, 0.1);
-    position: relative;
-    overflow: hidden;
-}
 
-.portada-uam::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #00abb9, #006670, #004a52);
-}
-
-.universidad-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 2px solid rgba(0, 171, 185, 0.2);
-}
-
-.universidad-nombre {
-    font-size: 28px !important;
-    color: #006670 !important;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    font-family: Arial, sans-serif !important;
-}
-
-.titulo-principal {
-    font-size: 42px !important;
-    color: #00abb9 !important;
-    font-weight: bold;
-    margin: 2rem 0;
-    line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif !important;
-    background: linear-gradient(135deg, #00abb9, #006670);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.subtitulo-portada {
-    font-size: 26px !important;
-    color: #004a52 !important;
-    margin-bottom: 3rem;
-    font-style: italic;
-    font-family: Arial, sans-serif !important;
-}
-
-.info-asignatura {
-    background: rgba(0, 171, 185, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid #00abb9;
-    margin-top: 2rem;
-    font-size: 22px !important;
-    color: #006670 !important;
-    font-family: Arial, sans-serif !important;
-}
-
-.grupo-info {
-    font-weight: bold;
-    color: #004a52 !important;
-}
-
-/* ===== RESPONSIVE MEJORADO ===== */
+/* Responsive para móviles */
 @media (max-width: 768px) {
-    .uam-logo {
-        width: 80px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .portada-uam {
-        padding: 2rem 1rem;
-        margin: 1rem auto;
-    }
-
-    .titulo-principal {
-        font-size: 32px !important;
-    }
-
-    .universidad-nombre {
-        font-size: 22px !important;
-    }
-
-    .subtitulo-portada {
-        font-size: 20px !important;
-    }
-
-    .info-asignatura {
-        font-size: 18px !important;
-        padding: 1rem;
+    .university-logo {
+        width: 60px;
+        top: 15px;
+        right: 15px;
     }
 }
 
-/* ===== PORTADA DE TÍTULO LARGO ===== */
-.portada-tesis {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: linear-gradient(135deg, #ffffff 0%, #f8fdff 100%);
-    border-radius: 15px;
-    margin: 2rem auto;
-    max-width: 85%;
-    box-shadow: 0 10px 30px rgba(0, 171, 185, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.portada-tesis::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #00abb9, #006670, #004a52);
-}
-
-.titulo-tesis {
-    font-size: 32px !important;
-    color: #004a52 !important;
-    font-weight: bold;
-    margin: 1.5rem 0;
-    line-height: 1.3;
-    text-align: center;
-    font-family: Arial, sans-serif !important;
-}
-
-.titulo-tesis-largo {
-    font-size: 28px !important;
-    color: #00abb9 !important;
-    font-weight: bold;
-    line-height: 1.4;
-    margin: 2rem 0;
-    text-align: center;
-    font-family: Arial, sans-serif !important;
-    padding: 0 1rem;
-}
-
-.subtitulo-tesis {
-    font-size: 22px !important;
-    color: #006670 !important;
-    font-style: italic;
-    margin: 1.5rem 0;
-    text-align: center;
-    font-family: Arial, sans-serif !important;
-}
-
-.seccion-integrantes {
-    background: rgba(0, 171, 185, 0.05);
-    padding: 2rem;
-    border-radius: 10px;
-    border-left: 4px solid #00abb9;
-    margin: 2rem auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-.titulo-integrantes {
-    font-size: 24px !important;
-    color: #004a52 !important;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    font-family: Arial, sans-serif !important;
-}
-
-.lista-integrantes {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.integrante-item {
-    font-size: 22px !important;
-    color: #006670 !important;
-    margin: 0.8rem 0;
-    padding: 0.5rem;
-    font-family: Arial, sans-serif !important;
-}
-
-.fecha-tesis {
-    font-size: 20px !important;
-    color: #004a52 !important;
-    font-weight: bold;
-    margin-top: 2rem;
-    padding: 1rem;
-    border-top: 2px solid rgba(0, 171, 185, 0.3);
-    font-family: Arial, sans-serif !important;
-}
-
-/* ===== RESPONSIVE PARA TÍTULO LARGO ===== */
-@media (max-width: 768px) {
-    .portada-tesis {
-        padding: 2rem 1rem;
-        margin: 1rem auto;
-        max-width: 95%;
-    }
-
-    .titulo-tesis {
-        font-size: 24px !important;
-    }
-
-    .titulo-tesis-largo {
-        font-size: 20px !important;
-        line-height: 1.3;
-    }
-
-    .subtitulo-tesis {
-        font-size: 18px !important;
-    }
-
-    .seccion-integrantes {
-        padding: 1.5rem;
-    }
-
-    .titulo-integrantes {
-        font-size: 20px !important;
-    }
-
-    .integrante-item {
-        font-size: 18px !important;
-    }
-
-    .fecha-tesis {
-        font-size: 18px !important;
+/* Para PDF/Impresión */
+@media print {
+    .university-logo {
+        display: none !important;
     }
 }

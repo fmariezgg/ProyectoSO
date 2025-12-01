@@ -2,244 +2,250 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Prototipo Sandbox - Universidad Americana</title>
+    <title>Defensa de Proyecto – Presentación</title>
 
-    <!-- CSS base de Reveal.js -->
+    <!-- CSS base Reveal.js -->
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
 
-    <!-- Tu CSS personalizado -->
+    <!-- Tema personalizado -->
     <link rel="stylesheet" href="css/soproyect.css">
 
-    <!-- Tema para resaltado de código -->
+    <!-- Highlight JS -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-    <!-- Mermaid.js para diagramas -->
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'dark'
-        });
-    </script>
+
 </head>
 <body>
 
 <div class="reveal">
     <div class="slides">
+
+        <!-- Logo de la universidad -->
+        <img src="css/img/logo-uam.png"
+             class="university-logo"
+             title="Universidad">
+
+        <div class="slides">
+            <!-- Portada y resto de slides... -->
+        </div>
+
         <!-- Portada -->
-        <section data-markdown="content/00-portada.md"
+        <section data-markdown="content/00-presentacion.md"
+                 data-separator="^\n---\n$"
+                 data-separator-vertical="^\n\n\n"
                  data-separator-notes="^Note:"
                  data-charset="utf-8">
         </section>
 
-        <!-- Tabla de Contenidos Interactiva - DISEÑO FORMAL -->
-        <section>
+        <!-- Tabla de Contenido -->
+        <section id="menu">
             <h2>Tabla de Contenidos</h2>
-            <div class="toc-container">
-                <ul class="toc-list">
-                    <li class="toc-item" onclick="Reveal.slide(2)">
-                        <span class="toc-number">1</span>
-                        <span class="toc-title">Introducción</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(3)">
-                        <span class="toc-number">2</span>
-                        <span class="toc-title">Planteamiento del Problema</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(4)">
-                        <span class="toc-number">3</span>
-                        <span class="toc-title">Objetivos</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(5)">
-                        <span class="toc-number">4</span>
-                        <span class="toc-title">Marco Teórico</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(6)">
-                        <span class="toc-number">5</span>
-                        <span class="toc-title">Marco Metodológico</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(7)">
-                        <span class="toc-number">6</span>
-                        <span class="toc-title">Análisis Comparativo</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(8)">
-                        <span class="toc-number">7</span>
-                        <span class="toc-title">Resultados del Diagnóstico</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(9)">
-                        <span class="toc-number">8</span>
-                        <span class="toc-title">Conclusiones y Recomendaciones</span>
-                    </li>
-                    <li class="toc-item" onclick="Reveal.slide(10)">
-                        <span class="toc-number">9</span>
-                        <span class="toc-title">Referencias</span>
-                    </li>
-                </ul>
-            </div>
+            <ol>
+                <li><a href="#/2">Introducción</a></li>
+                <li><a href="#/3">Planteamiento del Problema</a></li>
+                <li><a href="#/5">Objetivos</a></li>
+                <li><a href="#/6">Hipótesis</a></li>
+                <li><a href="#/7">Marco Teórico</a></li>
+                <li><a href="#/10">Marco Metodológico</a></li>
+                <li><a href="#/12">Análisis Comparativo</a></li>
+                <li><a href="#/13">Resultados del Diagnóstico</a></li>
+                <li><a href="#/14">Conclusiones y Recomendaciones</a></li>
+                <li><a href="#/15">Referencias</a></li>
+                <li><a href="#/16">Demostración MVP</a></li>
+                <li><a href="#/18">Gracias y Preguntas</a></li>
+            </ol>
+        </section>
 
-            <div class="navigation-tip">
-                💡 <strong>Tip:</strong> Presiona <kbd>T</kbd> para volver a esta tabla desde cualquier slide
+        <!-- Secciones de contenido -->
+        <section data-markdown="content/01-introduccion.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
             </div>
         </section>
-
-        <!-- Resto de las secciones cargadas desde archivos MD -->
-        <section data-markdown="content/02-introduccion.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
+        <section data-markdown="content/02-planteamiento-del-problema.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/03-objetivos.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/04-hipotesis.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/05-marco-teorico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/06-marco-metodologico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/07-analisis-comparativo.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/08-resultados-diagnostico.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/09-conclusiones-recomendaciones.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/10-referencias.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/11-demostracion-mvp.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
+        </section>
+        <section data-markdown="content/12-gracias-preguntas.md">
+            <div class="back-button-container">
+                <a href="#/1" class="back-button">← Índice</a>
+            </div>
         </section>
 
-        <section data-markdown="content/03-problema.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/04-objetivos.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/05-marco-teorico.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/06-metodologia.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/07-analisis-comparativo.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/08-resultados.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/09-conclusiones.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-
-        <section data-markdown="content/10-referencias.md"
-                 data-separator="^\n---\n"
-                 data-separator-vertical="^\n--\n"
-                 data-separator-notes="^Note:"
-                 data-charset="utf-8">
-        </section>
-    </div>
-
-    <!-- Botón de regreso a tabla de contenidos -->
-    <div class="back-button" onclick="Reveal.slide(1)">
-        ← Volver al Índice
     </div>
 </div>
 
-<!-- Core Reveal.js -->
+<!-- Reveal.js Core -->
 <script src="dist/reveal.js"></script>
 
 <!-- Plugins -->
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/notes/notes.js"></script>
-
-<!-- Logo en la esquina superior izquierda -->
-<img src="css/img/logo-uam.png" alt="Logo Universidad Americana" class="uam-logo">
-
-<!-- Portada mejorada -->
-<section class="portada-uam">
-    <div class="universidad-header">
-        <div class="universidad-nombre">Universidad Americana</div>
-    </div>
-
-    <h1 class="titulo-principal">Prototipo de Entorno de Virtualización "Sandbox" de Bajo Costo</h1>
-
-    <div class="subtitulo-portada">Asignatura: Sistemas Operativos</div>
-
-    <div class="info-asignatura">
-        <span class="grupo-info">Grupo 7</span>
-    </div>
-</section>
-
-<!-- Script personalizado para funcionalidades adicionales -->
-<script src="js/custom.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
 
 <script>
-    // Inicializar Reveal.js
+    // Inicializar Reveal.js con la configuración correcta
     Reveal.initialize({
-        hash: true,
-        slideNumber: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-        transition: 'fade',
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the slide number
+        slideNumber: false,
+        // Display a subtle timer bar (time is in minutes)
+        timeRemaining: 15,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable touch support
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Enable fragments
+        fragments: true,
+        // Embedded
+        embedded: false,
+        // Display help
+        help: true,
+        // Number of milliseconds between automatically proceeding to the next slide
+        autoSlide: 0,
+        // Allow stopping the auto-slide
         autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Hide the address bar
+        hideAddressBar: true,
+        // Preview the links
+        previewLinks: false,
+        // Apply a 3D roll to links on hover
+        rollingLinks: false,
+        // Transition style
+        transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+        // Speed of the transition effect
+        transitionSpeed: 'default',
+        // Transition of the background
+        backgroundTransition: 'default',
+        // View distance
+        viewDistance: 3,
+        // Configuración adicional de tu presentación
+        hash: true,
+        controlsLayout: "bottom-right",
+        controlsBackArrows: "faded",
 
-        // Configuración para markdown
+        // Configuración específica de Markdown
         markdown: {
-            smartypants: true
+            smartypants: true,
+            smartLists: true,
+            separator: '^\n---\n',
+            separatorVertical: '^\n\n\n',
+            separatorNotes: '^Note:'
+        },
+
+        // Plugins
+        plugins: [
+            RevealMarkdown,
+            RevealHighlight,
+            RevealNotes,
+            RevealZoom
+        ]
+    }).then(() => {
+        // Una vez que Reveal esté listo
+        console.log('Reveal.js inicializado correctamente');
+
+        // Configurar highlighting de código
+        hljs.initHighlightingOnLoad();
+    });
+
+    // Hotkeys personalizadas: T = índice, P = portada
+    document.addEventListener('keydown', function(event) {
+        // Solo activar si no estamos en un elemento editable
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            return;
+        }
+
+        if(event.key === 'T' || event.key === 't'){
+            Reveal.slide(1); // Tabla de contenido
+            event.preventDefault();
+        }
+        if(event.key === 'P' || event.key === 'p'){
+            Reveal.slide(0); // Portada
+            event.preventDefault();
         }
     });
 
-    // Funcionalidad para el botón de regreso y navegación
-    document.addEventListener('DOMContentLoaded', function() {
-        const backButton = document.querySelector('.back-button');
-
-        // Ocultar botón en las primeras dos slides (portada y tabla de contenidos)
-        Reveal.addEventListener('slidechanged', function(event) {
-            if (event.indexh <= 1) {
-                backButton.style.display = 'none';
-            } else {
-                backButton.style.display = 'block';
+    // Función para asegurar que los botones de regreso estén en todas las slides
+    Reveal.on('slidechanged', function(event) {
+        // Asegurarse de que el botón esté presente en todas las slides excepto portada e índice
+        if (event.indexh > 1) { // Si no es la slide 0 (portada) ni 1 (índice)
+            const currentSlide = event.currentSlide;
+            if (!currentSlide.querySelector('.back-button-container')) {
+                const backButton = document.createElement('div');
+                backButton.className = 'back-button-container';
+                backButton.innerHTML = '<a href="#/1" class="back-button">← Índice</a>';
+                currentSlide.appendChild(backButton);
             }
-
-            // Actualizar estado activo en tabla de contenidos
-            updateActiveTOC(event.indexh);
-        });
-
-        // Shortcut de teclado para tabla de contenidos
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 't' || event.key === 'T') {
-                Reveal.slide(1); // Ir a tabla de contenidos
-            }
-            if (event.key === 'h' || event.key === 'H') {
-                Reveal.slide(0); // Ir a portada
-            }
-        });
-
-        // Función para actualizar estado activo en tabla de contenidos
-        function updateActiveTOC(slideIndex) {
-            const tocItems = document.querySelectorAll('.toc-item');
-            tocItems.forEach((item, index) => {
-                item.classList.remove('active');
-                if (index + 2 === slideIndex) {
-                    item.classList.add('active');
-                }
-            });
         }
-
-        // Inicializar estado activo
-        updateActiveTOC(Reveal.getIndices().h);
     });
+
 </script>
 
 </body>
