@@ -120,12 +120,3 @@
 
 ---
 
-## 12. Niveles de Abstracción
-
-| Nivel | Ejemplo | Control Usuario | Complejidad |
-|-------|---------|-----------------|-------------|
-| **Física** | Hardware | Total | Muy alta |
-| **IaaS** | DigitalOcean | SO, aplicaciones | Media |
-| **PaaS** | Heroku | Solo aplicación | Baja |
-| **SaaS** | Gmail | Solo uso | Muy baja |
-| **Contenedores** | Docker | Aplicación + dependencias | Media-baja |
